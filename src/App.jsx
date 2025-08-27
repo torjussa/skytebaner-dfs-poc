@@ -87,7 +87,7 @@ function App() {
   }, []);
 
   useEffect(() => {
-    fetch("/shooting-range-data.json")
+    fetch(`${import.meta.env.BASE_URL}shooting-range-data.json`)
       .then((res) => {
         if (!res.ok) throw new Error("Failed to load data");
         return res.json();
